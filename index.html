@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="number"]{
+            width: 100%;
+            padding: 12px 20px;
+            margin:8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        button{
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #45a049;
+        }
+        #result{
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2> CM to inches Converter</h2>
+    <label for="cm">
+        enter the lenght in centimeters:
+    </label>
+    <input type="number" id="cm" placeholder="enter the centimeters">
+    <button onclick="convert()">convert</button>
+    <div id="result">
+        
+    </div>
+    <!--<button id="clearbtn"> clear</button>-->
+    <script>
+        function convert(){
+            const cm = document.getElementById("cm").value;
+            const inches=cm/2.54;
+           const kani = document.getElementById("result");
+           kani.innerHTML = inches.toFixed(2) +" inches."
+        }
+      /*  const cm = document.getElementById("cm");
+        const clearbutton = document.getElementById("clearbtn");
+
+        clearbutton.addEventListener("click",()=>{
+            cm.value='';
+        });*/
+    
+    </script>
+</body> 
+</html>
